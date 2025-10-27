@@ -28,7 +28,10 @@ h2 {
   font-family: "Domine", serif;
 }
 
-/* globals.css */
+.card-custom-top-right {
+  border-top-right-radius: 52px 40px;
+}
+
 
 .bg-dot-fade {
   background-color: #fff;
@@ -38,3 +41,12 @@ h2 {
   background-size: 18px 18px, 100% 100%;
   background-position: 0 0, 0 0;
 }
+
+
+
+.card-custom-top-right {
+  border-top-right-radius: 50px 32px;
+}
+
+
+

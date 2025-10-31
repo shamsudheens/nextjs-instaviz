@@ -11,8 +11,8 @@ const Home: React.FC = () => {
       <div className="min-h-screen bg-gray-50 ">
         <Navbar />
         <div className="pt-13 flex flex-col md:flex-row  h-screen">
-          <DashboardMain showData={dataUploaded} />
-          <ChatBar dataUploaded={dataUploaded} setDataUploaded={setDataUploaded} />
+          <DashboardMain showData={dataUploaded}/>
+          <ChatBar dataUploaded={dataUploaded} setDataUploaded={setDataUploaded}/>
         </div>
       </div>
     </>

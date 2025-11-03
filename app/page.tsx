@@ -8,13 +8,22 @@ export default function Page() {
         <nav className="flex justify-center items-center font-light text-lg mt-6  border-gray-300  gap-7 md:5 rounded-full w-full max-w-lg border bg-white/80 backdrop-blur-md px-6 py-3 shadow-md">
           <img src="/logo.png" className="w-24 h-auto" alt="Logo" />
           <ul className="hidden md:flex items-center gap-8">
-            <li className="cursor-pointer hover:text-[#AD49E1] transition">Home</li>
-            <li className="cursor-pointer hover:text-[#AD49E1] transition">Pricing</li>
+
+            <Link href='/home'>
+              <li className="cursor-pointer hover:text-[#AD49E1] transition">Home</li>
+            </Link>
+
+            <Link href='/ourplans'>
+              <li className="cursor-pointer hover:text-[#AD49E1] transition">Pricing</li>
+
+            </Link>
+
             <Link href="/signup">
               <li className="bg-[#AD49E1] px-5 py-2 rounded-2xl text-white hover:bg-[#9929d5] cursor-pointer">
                 Signup
               </li>
             </Link>
+
           </ul>
           <div className="md:hidden">
             <Link href="/signup">

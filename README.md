@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InstaviZ – AI Powered Data Visualization (Frontend)
 
-## Getting Started
+InstaviZ is an AI-powered data visualization platform that allows users to upload CSV datasets, explore them interactively, chat with their data using AI, and generate charts dynamically — all through a clean and intuitive web interface.
 
-First, run the development server:
+This repository contains the **frontend** of InstaviZ, built with **Next.js** and **React**, designed to work seamlessly with the InstaviZ backend and AI services.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 📂 **CSV Upload Interface**
+  - Upload large CSV files
+  - Upload state persists across refresh using backend checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 📊 **Dynamic Chart Rendering**
+  - Bar charts, pie charts, and more
+  - Charts generated dynamically from backend responses
 
-## Learn More
+- 🤖 **AI Chat with Data**
+  - Ask questions about your dataset
+  - Request custom aggregations and charts via chat
+  - Natural language → chart conversion
 
-To learn more about Next.js, take a look at the following resources:
+- 👤 **Guest & Authenticated User Support**
+  - Guest users supported via cookies
+  - Logged-in users via JWT authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🔄 **Refresh-Safe UI**
+  - Dataset state restored on page reload
+  - No need to re-upload data after refresh
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 📱 **Responsive UI**
+  - Optimized for desktop and mobile
+  - Chat panel adapts to screen size
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **UI**: React, Tailwind CSS
+- **State Management**: React Context
+- **HTTP Client**: Axios
+- **Charts**: Dynamic chart components (via backend data)
+- **Authentication**: JWT & guest cookies (via backend)
+- **AI Integration**: Gemini-powered backend (not in this repo)
+
+---
+
+## 📂 Project Structure (Simplified)
+
+```txt
+src/
+ ├─ app/                # Next.js app router pages
+ ├─ components/         # Reusable UI components
+ ├─ context/            # Global state (charts, analysis, upload status)
+ ├─ lib/                # Axios instance & helpers
+ ├─ hooks/              # Custom hooks
+ └─ styles/             # Global styles
